@@ -24,8 +24,11 @@ export const ListItem: React.FC<ListItemProps> = ({
             </div>
         </div>
         <div className="flex flex-col flex-1 justify-start items-start ml-4">
-            <div className=" h-8 leading-8 ">{title}</div>
-            <div className="text-slate-400 text-sm">{description}</div>
+            <div>{title}</div>
+            {
+                description !== "" &&
+                <div className="text-slate-400 text-sm mt-2">{description}</div>
+            }
         </div>
     </div>
 )
